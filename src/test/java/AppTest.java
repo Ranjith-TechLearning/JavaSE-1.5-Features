@@ -6,8 +6,14 @@ import static org.junit.Assert.*;
 
 public class AppTest {
     @Test public void testAutoBoxing() {
-        AutoboxingUnboxing classUnderTest = new AutoboxingUnboxing();
-        assertTrue(20 == classUnderTest.autoBoxingExample());
-
+        App classUnderTest = new App();
+        int primitiveType =20;
+        assertTrue(classUnderTest.autoBoxingExample(primitiveType) instanceof Integer);
+    }
+    @Test
+    public void testUnBoxing(){
+        App classUnderTest = new App();
+        Integer wrapperType = new Integer (30);
+        assertTrue(30 == classUnderTest.unBoxingExample(wrapperType));
     }
 }
