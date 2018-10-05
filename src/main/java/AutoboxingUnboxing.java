@@ -4,21 +4,22 @@
 public class AutoboxingUnboxing {
 
     public static void main(String[] args) {
-       new AutoboxingUnboxing().autoBoxingExample();
-       new AutoboxingUnboxing().unBoxingExample();
+       System.out.println("Java 1.5 - Autoboxing example :"+ new AutoboxingUnboxing().autoBoxingExample());
+       System.out.println("Java 1.5 - Unboxing example :"+ new AutoboxingUnboxing().unBoxingExample());
 
     }
-    public void autoBoxingExample(){
+    public Integer autoBoxingExample(){
         System.out.println("This autoboxing");
         int prmtivetypeInt = 20;
         Integer wrapperInt=prmtivetypeInt;
         System.out.println("Premitive automatically converted to Wrapper type (Compiler does this automatically Integer.valueOf(prmtivetypeInt)): "+wrapperInt);
-
+        return wrapperInt;
     }
-    public void unBoxingExample(){
+    public int unBoxingExample(){
         System.out.println("This unboxing");
         Integer wrapperInt=30;
         int prmInt=wrapperInt;
         System.out.println("Wapper type automatically converted to Premitive type (// Compiler does this automatically wrapperInt.intValue()): "+ prmInt);
+        return prmInt;
     }
 }
