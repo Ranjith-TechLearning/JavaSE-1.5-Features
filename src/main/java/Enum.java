@@ -1,4 +1,4 @@
-
+import java.util.concurrent.Callable;
 
 public class Enum {
     public enum chineesMenu{
@@ -9,8 +9,8 @@ public class Enum {
         private int price;
         private chineesMenu(int price){
             this.price=price;
+
         }
-        
     }
 
 
